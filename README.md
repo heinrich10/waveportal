@@ -1,15 +1,17 @@
-# Basic Sample Hardhat Project
+# Wave Portal Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+### Test locally
 
-Try running some of the following tasks:
+1. do `npm install` to install the dependencies
+2. run `npx hardhat run scripts/run.js`
+3. local simulations on Solidity is found on the `scripts/run.js`
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+### Deploy to testnet
+
+1. do `npm install`
+2. get an API key from Alchemy
+3. make sure you have an ETH wallet, this example uses `rinkeby testnet`
+4. create a `.env` file and populate it with `URL` and `PRIVATE_KEY`
+5. execute `npx hardhat run scripts/deploy.js --network rinkeby`
+6. the smart contract address should be `WavePortal address`
+7. you can check Etherscan for the other details
